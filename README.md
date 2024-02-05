@@ -63,15 +63,19 @@ Em expressões lambda em Java, os parênteses e colchetes são usados de maneira
 
 Em vez de usar expressões lambda, você pode usar referências de método quando estiver chamando um método existente. Existem quatro tipos de referências de método:
 - Referência para um método estático:
+  
             // Sintaxe: NomeDaClasse::metodoEstatico
             Math::max
 - Referência para um método de instância de um objeto particular:
+  
             // Sintaxe: instancia::metodoDeInstancia
             String::length
 - Referência para um método de instância de um tipo particular:
+  
             // Sintaxe: NomeDaClasse::metodoDeInstancia
             String::toUpperCase
 - Referência para um construtor:
+  
             // Sintaxe: NomeDaClasse::new
             ArrayList::new
 
