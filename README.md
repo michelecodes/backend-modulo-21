@@ -46,6 +46,55 @@ Em expressões lambda em Java, os parênteses e colchetes são usados de maneira
             
             // Sem parâmetros
             () -> System.out.println("Sem parâmetros")
+  - Sem parâmetros: Quando não há parâmetros, você ainda precisa usar parênteses vazios () para indicar a lista de parâmetros.
+
+### Colchetes:
+
+- Corpo da expressão lambda: O corpo de uma expressão lambda pode ser uma única expressão ou um bloco de código. Se o corpo contiver mais de uma expressão, você deve usar colchetes {} para envolver o bloco e explicitamente usar a palavra-chave return se o valor de retorno for necessário.
+            // Uma única expressão
+            (a, b) -> a + b
+            
+            // Bloco de código com mais de uma expressão
+            (a, b) -> {
+                int result = a + b;
+                return result;
+            }
+  ### Referências de Método:
+
+Em vez de usar expressões lambda, você pode usar referências de método quando estiver chamando um método existente. Existem quatro tipos de referências de método:
+- Referência para um método estático:
+            // Sintaxe: NomeDaClasse::metodoEstatico
+            Math::max
+- Referência para um método de instância de um objeto particular:
+            // Sintaxe: instancia::metodoDeInstancia
+            String::length
+- Referência para um método de instância de um tipo particular:
+            // Sintaxe: NomeDaClasse::metodoDeInstancia
+            String::toUpperCase
+- Referência para um construtor:
+            // Sintaxe: NomeDaClasse::new
+            ArrayList::new
+
+As referências de método ajudam a simplificar a sintaxe quando você está chamando métodos existentes. Elas são uma alternativa concisa e legível às expressões lambda, especialmente quando a lambda apenas chama um método existente sem adicionar lógica adicional.
+
+### Exemplo
+            // Usando referência de método para um método estático
+            OperacaoMatematica adicao = Integer::sum;
+            
+            // Usando referência de método para um método de instância de um objeto particular
+            StringConverter converter = String::toUpperCase;
+            
+            // Usando referência de método para um construtor
+            List<String> lista = ArrayList::new;
+
+Em resumo, parênteses, colchetes e referências de método são elementos importantes ao trabalhar com expressões lambda em Java. Eles fornecem flexibilidade e concisão ao expressar comportamentos funcionais de maneira mais elegante.
+
+
+
+
+
+
+
 
 
 
