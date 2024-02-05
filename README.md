@@ -31,3 +31,21 @@ As expressões lambda são especialmente úteis quando você precisa passar func
 
 Vale ressaltar que as expressões lambda em Java têm algumas regras e restrições, e nem todas as interfaces funcionais são compatíveis com elas. Além disso, desde o Java 8, a linguagem tem evoluído, e novos recursos foram adicionados em versões subsequentes.
 
+## Parênteses e Colchetes nas Expressões Lamba
+
+Em expressões lambda em Java, os parênteses e colchetes são usados de maneiras específicas e podem afetar o comportamento da lambda, especialmente quando se trata de parâmetros e referências de métodos.
+
+### Parênteses:
+
+- Com parâmetros: Se uma expressão lambda tem zero ou mais de um parâmetro, você deve usar parênteses em torno dos parâmetros, a menos que haja exatamente um parâmetro sem tipo, nesse caso, os parênteses são opcionais.
+- Por exemplo:
+
+              // Com parâmetros
+            (a, b) -> a + b
+            (String s) -> System.out.println(s)
+            
+            // Sem parâmetros
+            () -> System.out.println("Sem parâmetros")
+
+
+
